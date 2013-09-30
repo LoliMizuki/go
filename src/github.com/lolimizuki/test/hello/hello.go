@@ -1,9 +1,12 @@
 package main
 
 import (
-	// "code.google.com/p/go-tour/pic"
 	"fmt"
+	"github.com/lolimizuki/mypack"
 	"math"
+	"math/rand"
+	"runtime"
+	"time"
 )
 
 // fail := "FAIL" // := 不可以用在這裡
@@ -13,6 +16,12 @@ type Vertex struct {
 	X int
 	Y int
 }
+
+type number struct {
+	num float32
+}
+
+type nr number
 
 func add(x int, y int) int {
 	return x + y
@@ -126,6 +135,46 @@ func fibonacci(n int) int {
 	}
 }
 
+func test_switch() {
+	fmt.Print("OS=")
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OS X")
+	case "linux":
+		fmt.Println("Linux")
+	default:
+		fmt.Println("Opps")
+	}
+
+	// no condition swich == clear if ... else if ... else
+	rand.Seed(time.Now().UnixNano())
+
+	r := rand.Intn(100)
+	fmt.Println("Rand is ", r)
+	switch {
+	case 0 <= r && r < 50:
+		fmt.Println("0~50")
+	case 50 <= r:
+		fmt.Println("50~")
+	}
+
+	r2 := rand.Intn(5) // 0~4
+	switch r2 {
+	case 0:
+		fallthrough
+	case 1:
+		fmt.Println("r is 0 or 1")
+
+	case 2:
+		fallthrough
+	case 3:
+		fmt.Println("r is 2 or 3")
+
+	case 4:
+		fmt.Println("r is 4")
+	}
+}
+
 func main() {
 	fmt.Println("Hello 世界")
 
@@ -160,4 +209,16 @@ func main() {
 	test_map()
 
 	fmt.Println(fibonacci(8))
+	test_switch()
+
+	fmt.Println("Test My Package")
+	fmt.Println(mypack.MyFunction())
+	fmt.Println(mypack.MyFunction2())
+	fmt.Println(mypack.MyInt)
+
+	aa := number{12.12}
+	var bb nr
+	// bb = aa
+	bb = nr(aa)
+	fmt.Println(bb)
 }

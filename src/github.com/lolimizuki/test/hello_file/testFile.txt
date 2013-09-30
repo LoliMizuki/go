@@ -1,0 +1,19 @@
+#import "SFGamePlayScene.h"
+#import "SFHeader.h"
+@interface SFGamePlayScene (Private)
+@end
+#pragma mark
+@implementation SFGamePlayScene
+#pragma mark - init and dealloc
++(SFGamePlayScene *)scene
+{return [[[self alloc] init] autorelease];}
+-(id)init
+{self = [super init];
+SFGameLayer *gameLayer = [SFGameLayer node];
+SFGameGUILayer *gameGUILayer = [SFGameGUILayer node];
+[SFGameComponents sharedInstance].gameLayerRef = gameLayer;
+[SFGameComponents sharedInstance].gameGUILayerRef = gameGUILayer;
+[self addChild: gameLayer];
+[self addChild: gameGUILayer];
+[gameLayer afterInit];
+return self;}
