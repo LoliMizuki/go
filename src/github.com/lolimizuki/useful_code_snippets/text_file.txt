@@ -1,0 +1,133 @@
+Explore
+Gist
+Blog
+Help
+LoliMizuki
+ News Feed LoliMizuki
+News Feed
+Pull Requests
+Issues
+Stars
+GitHub Bootcamp If you are still new to things, we’ve provided a few walkthroughs to get you started.
+Set up Git
+A quick guide to help you get started with Git.
+1
+Create repositories
+Repositories are where you’ll work and collaborate on projects.
+2
+Fork repositories
+Forking creates a new, unique project from an existing one.
+3
+Be social
+Send pull requests, follow friends.
+Star and watch projects.
+4
+You’ve been added to the FingerRockz organization!
+Here are some quick tips for a first-time organization member
+Context_button Use the switch context button in the upper left corner of this screen to switch between your personal context (LoliMizuki) and any organizations you are a member of.
+
+After you switch contexts you’ll see an organization-focused dashboard that lists out organization repositories and activities.
+5 days ago
+mizukifingerrockz commented on pull request LoliMizuki/GitTwoRepo#1
+
+let me show you new world!!!!
+5 days ago
+mizukifingerrockz opened pull request LoliMizuki/GitTwoRepo#1
+
+bu bu bu ~~
+ 1 commit with 4 additions and 0 deletions
+mizukifingerrockz forked LoliMizuki/GitTwoRepo to mizukifingerrockz/GitTwoRepo  5 days ago
+mizukifingerrockz started following LoliMizuki  5 days ago
+5 days ago
+mizukifingerrockz pushed to master at LoliMizuki/GitTwoRepo
+
+  db4adc8 mz@fz
+6 days ago
+admmasters opened issue Everyplay/everyplay-ios-sdk#9
+
+Mutiple crashes being submitted when presentRenderbufferEveryplay: is called.
+zengchao forked OpenWatch/OpenWatch-Android to zengchao/OpenWatch-Android  7 days ago
+11 days ago
+aet commented on issue Everyplay/everyplay-ios-sdk#7
+
+This should be fixed in 1.6.3 SDK
+11 days ago
+aet closed issue Everyplay/everyplay-ios-sdk#7
+
+Under cocos2d-x,use kResolutionShowAll cause screen size change
+12 days ago
+gauravlnx opened issue Everyplay/everyplay-ios-sdk#8
+
+Audio metering doesn't work for AVAudioPlayer
+aet created tag 1.6.3 at Everyplay/everyplay-ios-sdk  14 days ago
+14 days ago
+aet pushed to master at Everyplay/everyplay-ios-sdk
+
+  bbd6994 Release 1.6.3
+17 days ago
+admmasters closed issue Everyplay/everyplay-ios-sdk#6
+
+Low quality background music - with clicks using CocosDenshion
+17 days ago
+admmasters commented on issue Everyplay/everyplay-ios-sdk#6
+
+I can confirm the clicks have gone. Good job!
+19 days ago
+janey001 opened issue Everyplay/everyplay-ios-sdk#7
+
+Under cocos2d-x,use kResolutionShowAll cause screen size change
+zengchao forked andynicholson/Vidiom to zengchao/Vidiom  a month ago
+zengchao forked alexwilczewski/android-video-scan to zengchao/android-video-scan  a month ago
+aet created tag 1.6.2 at Everyplay/everyplay-ios-sdk  a month ago
+a month ago
+aet pushed to master at Everyplay/everyplay-ios-sdk
+
+  aea1933 Release 1.6.2
+zengchao forked hxy060799/PlaneWar to zengchao/PlaneWar  a month ago
+a month ago
+yamede pushed to master at LoliMizuki/FRDefense
+
+  1db200c commited by Allen
+a month ago
+yamede opened issue LoliMizuki/FRDefense#1
+
+Test
+2 months ago
+aet commented on issue Everyplay/everyplay-ios-sdk#6
+
+There were some audio clicks fixed with the just released 1.6.1 SDK Sound quality wise, could you provide a test case for us? Just a song will do
+aet created tag 1.6.1 at Everyplay/everyplay-ios-sdk  2 months ago
+2 months ago
+aet pushed to master at Everyplay/everyplay-ios-sdk
+
+  e961674 Release 1.6.1
+2 months ago
+admmasters opened issue Everyplay/everyplay-ios-sdk#6
+
+Low quality background music - with clicks using CocosDenshion
+adahera222 forked stelford/Titanium-Calendar to adahera222/Titanium-Calendar  2 months ago
+adahera222 forked Nyvra/TiEventKit to adahera222/TiEventKit  2 months ago
+adahera222 forked Appgutta/AGCalendar to adahera222/AGCalendar  2 months ago
+adahera222 forked kurain/TitaniumCalendar to adahera222/TitaniumCalendar  2 months ago
+More
+Opening files from pull requests and branches
+Just click a button to open a file in its native editor!
+× hide this broadcast View 88 new broadcasts
+Repositories you contribute to
+FingerRockz/FRDefense 0 
+ New repository Your repositories (8)
+
+All Repositories
+Public
+Private
+Sources
+Forks
+iOS
+gocode
+mkslinks
+Unity
+fmdb
+Python
+Racket
+doom3.gpl
+Status API Training Shop Blog About © 2013 GitHub, Inc. Terms Privacy Security Contact
