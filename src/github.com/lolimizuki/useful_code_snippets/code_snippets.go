@@ -239,8 +239,9 @@ func read_write_file_with_slice_buffer() {
 	}
 
 	for {
-		switch numberOfRead, _ := file.Read(buffer[:]); true {
+		switch numberOfRead, err := file.Read(buffer[:]); true {
 		case numberOfRead < 0:
+			fmt.Println("read error", err)
 			return
 
 		case numberOfRead == 0: // EOF
@@ -251,5 +252,4 @@ func read_write_file_with_slice_buffer() {
 			fmt.Println(string(buffer[:numberOfRead]))
 		}
 	}
-
 }
