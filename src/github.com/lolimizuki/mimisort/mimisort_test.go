@@ -70,7 +70,8 @@ func TestIntsArray(t *testing.T) {
 }
 
 func TestStringsArray(t *testing.T) {
-	stringsArray := StringArray{"fdsa", "grb", "yttc", "dsdd", "zzzt", "Mizuki", "Pachi", "Totori", "Nekoko", "nekoko", "nakoko"}
+	stringsArray :=
+		StringArray{"fdsa", "grb", "yttc", "dsdd", "zzzt", "Mizuki", "Pachi", "Totori", "Nekoko", "nekoko", "nakoko"}
 	Sort(stringsArray)
 
 	if IsSorted(stringsArray) == false {
@@ -89,4 +90,11 @@ func TestStructsArray(t *testing.T) {
 	if IsSorted(myStructs) == false {
 		t.Errorf("sort fail in structs array, order: , %v", myStructs)
 	}
+}
+
+func BenchmarkStringsort(b *testing.B) {
+	fmt.Printf("Benchmark")
+	stringsArray :=
+		StringArray{"fdsa", "grb", "yttc", "dsdd", "zzzt", "Mizuki", "Pachi", "Totori", "Nekoko", "nekoko", "nakoko"}
+	Sort(stringsArray)
 }

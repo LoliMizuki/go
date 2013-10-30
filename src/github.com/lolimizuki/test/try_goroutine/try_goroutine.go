@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	TestChannel()
+	// TestChannel()
 	// TestGoRoutine()
 }
 
