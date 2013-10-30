@@ -22,3 +22,9 @@ _cgo_export.*
 _testmain.go
 
 *.exe
+
+src/github.com/mattn/go-sqlite3/
+
+src/github.com/go-sql-driver/mysql/
+
+src/github.com/bitly/go-simplejson/
