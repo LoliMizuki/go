@@ -15,7 +15,8 @@ func (m MyStruct) String() string {
 
 func main() {
 	// reflect_with_float()
-	reflect_with_struct()
+	// reflect_with_struct()
+	recover_from_relfect()
 }
 
 func reflect_with_float() {
@@ -42,9 +43,13 @@ func reflect_with_struct() {
 	ref := reflect.ValueOf(myStruct)
 	fmt.Println("number of field(s)=", ref.NumField())
 	fmt.Println("number of method(s)=", ref.NumMethod())
+
+	fmt.Println("list all fields")
 	for i := 0; i < ref.NumField(); i++ {
 		fmt.Println(ref.Field(i))
 	}
+
+	fmt.Println("call method #0")
 	fmt.Println(ref.Method(0).Call(nil))
 
 	myStruct2 := &MyStruct{"aa", "bb", "cc"}
@@ -52,4 +57,33 @@ func reflect_with_struct() {
 	elem.Field(0).SetString("Sachiko")
 	fmt.Println(elem.Field(0), elem.Field(1), elem.Field(2))
 	fmt.Println(myStruct2)
+}
+
+func recover_from_relfect() {
+	recover_any_interface := func(iValue interface{}, useSwitch bool) {
+		if useSwitch == true {
+			switch v := iValue.(type) {
+			case float64:
+				fmt.Println("You are Float64, ", v)
+
+			case MyStruct:
+				fmt.Println("You are MyStruct, ", v)
+			}
+
+			return
+		}
+
+		// manual recover
+		if v, ok := iValue.(MyStruct); ok {
+			fmt.Println("recover ok, modilfy you are value :D")
+			v.F1 = "Yaya"
+			fmt.Println(v)
+		} else {
+			fmt.Println("manual recover fail, you are type is not MyStruct")
+		}
+	}
+
+	recover_any_interface(64.66, true)
+	recover_any_interface(MyStruct{"aa", "bb", "cc"}, true)
+	recover_any_interface(MyStruct{"aa", "bb", "cc"}, false)
 }
