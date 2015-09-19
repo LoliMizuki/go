@@ -6,6 +6,7 @@ import (
 	"net"
 	"net/http"
 	"net/rpc"
+	"net/rpc/jsonrpc"
 	"os"
 )
 
@@ -40,10 +41,12 @@ func (a *Arith) Divide(args *Args, quoti *Quotient) error {
 }
 
 func main() {
-	rpc_http()
+	// rpc_http_server()
+	// rpc_tcp_server()
+	rpc_json_server()
 }
 
-func rpc_http() {
+func rpc_http_server() {
 	fmt.Println("RPC Server(HTTP) boot-on")
 	rpc.Register(new(Arith)) // 註冊一個 RPC 服務
 	rpc.HandleHTTP()         // 使用 HTTP
@@ -54,7 +57,7 @@ func rpc_http() {
 	}
 }
 
-func rpc_tcp() {
+func rpc_tcp_server() {
 	fmt.Println("RPC Server(TCP) boot-on")
 	rpc.Register(new(Arith))
 
@@ -70,8 +73,32 @@ func rpc_tcp() {
 			continue
 		}
 
+		// tcp 的 rpc 必須自行 serve
 		go rpc.ServeConn(conn)
 	}
+}
+
+func rpc_json_server() {
+	fmt.Println("RPC Server(JSON) boot-on")
+
+	rpc.Register(new(Arith))
+
+	tcpAddress, err := net.ResolveTCPAddr("tcp", ServerAddress)
+	checkError(err)
+
+	listener, err := net.ListenTCP("tcp", tcpAddress)
+	checkError(err)
+
+	for {
+		conn, err := listener.Accept()
+		if err != nil {
+			continue
+		}
+
+		go jsonrpc.ServeConn(conn)
+	}
+
+	net.ListenTCP("tcp", tcpAddress)
 }
 
 func checkError(e error) {

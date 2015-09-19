@@ -14,7 +14,7 @@ type Square struct {
 	side float64
 }
 
-func (s *Square) Area() float64 { // use pointer
+func (s *Square) Area() float64 { // pointer
 	return s.side * s.side
 }
 
@@ -23,7 +23,7 @@ type Recangle struct {
 	Width, Height float64
 }
 
-func (r Recangle) Area() float64 { // use not ponter
+func (r Recangle) Area() float64 { // non-pointer
 	return r.Width * r.Height
 }
 
@@ -41,12 +41,12 @@ type Stringer interface {
 }
 
 func main() {
-	// basic_try()
-	// try_to_identify_interface_value_type()
-	// try_pointer_value_call_methods()
+	basic_try()
+	try_to_identify_interface_value_type()
+	try_pointer_value_call_methods()
 
 	// 帶入 sort 函數
-	try_sort_MyData()
+	// try_sort_MyData()
 }
 
 func basic_try() {

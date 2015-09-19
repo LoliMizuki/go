@@ -40,6 +40,9 @@ func (y *Yuyuko) Fly() {
 }
 
 func main() {
+	MainInThird()
+
+	return
 	FuncCanExportFromSecFree()
 	TimeAdd()
 
